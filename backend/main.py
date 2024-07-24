@@ -1,7 +1,10 @@
-# main.py
 from fastapi import FastAPI, HTTPException
 import requests
 import os
+from dotenv import load_dotenv
+
+# Carregar variáveis de ambiente do arquivo .env
+load_dotenv()
 
 app = FastAPI()
 
