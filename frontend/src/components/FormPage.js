@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/App.css';  // Certifique-se de que o caminho está correto
 
 const FormPage = () => {
   const [nome, setNome] = useState('');
@@ -22,18 +23,32 @@ const FormPage = () => {
   };
 
   return (
-    <div>
+    <div className="form-page">
       <h1>Buscar Filme</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nome:</label>
-          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+      <form onSubmit={handleSubmit} className="form-container">
+        <div className="form-group">
+          <label htmlFor="nome">Nome:</label>
+          <input
+            id="nome"
+            type="text"
+            value={nome}
+            onChange={(e) => setNome(e.target.value)}
+            className="form-input"
+            placeholder="Digite seu nome"
+          />
         </div>
-        <div>
-          <label>Filme:</label>
-          <input type="text" value={filme} onChange={(e) => setFilme(e.target.value)} />
+        <div className="form-group">
+          <label htmlFor="filme">Filme:</label>
+          <input
+            id="filme"
+            type="text"
+            value={filme}
+            onChange={(e) => setFilme(e.target.value)}
+            className="form-input"
+            placeholder="Digite o nome do filme"
+          />
         </div>
-        <button type="submit">Buscar</button>
+        <button type="submit" className="submit-button">Buscar</button>
       </form>
     </div>
   );
