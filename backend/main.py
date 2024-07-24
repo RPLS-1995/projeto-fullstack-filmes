@@ -7,8 +7,8 @@ app = FastAPI()
 
 @app.get('/filmes')
 async def buscar_filmes():
-    # Endpoint para buscar filmes em uma API (exemplo com API do OMDB)
-    api_url = 'http://www.omdbapi.com/?s=Avengers&apikey=your_api_key'  # Substitua com sua API key
+    # Endpoint para buscar filmes na API The One. 
+    api_url = 'https://the-one-api.dev/v2/movie&apikey=your_api_key'  # Substitua com sua API key
 
     # Realizando a requisição GET
     response = requests.get(api_url)
