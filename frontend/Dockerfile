@@ -10,6 +10,10 @@ COPY package*.json ./
 # Instale as dependências do Node.js
 RUN npm install
 
+# Instale react-router-dom e axios após instalar as dependências principais
+RUN npm install react-router-dom
+RUN npm install axios
+
 # Copie o restante do código da aplicação para o contêiner
 COPY . .
 

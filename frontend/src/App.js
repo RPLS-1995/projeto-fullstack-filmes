@@ -1,17 +1,17 @@
-// src/App.js
 import React from 'react';
-import ExampleComponent from './components/ExampleComponent';
-import './styles/App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FormPage from './components/FormPage';
+import TablePage from './components/TablePage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Minha Aplicação React</h1>
-        <ExampleComponent />
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FormPage />} />
+        <Route path="/table" element={<TablePage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
