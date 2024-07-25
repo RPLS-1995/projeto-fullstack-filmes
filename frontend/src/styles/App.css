@@ -55,3 +55,48 @@ h1 {
 .submit-button:hover {
   background-color: #45a049; /* Cor do botão ao passar o mouse */
 }
+
+/* Estilos adicionais para TablePage */
+.table-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f4f8; /* Cor de fundo suave */
+  font-family: Arial, sans-serif; /* Fonte limpa e moderna */
+  color: #333; /* Cor do texto */
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.data-table {
+  width: 80%;
+  border-collapse: collapse;
+  background-color: #ffffff; /* Fundo branco para a tabela */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: center; /* Centraliza o texto na tabela */
+  border: 1px solid #ddd; /* Bordas da tabela */
+  font-size: 1.1em;
+}
+
+.data-table th {
+  background-color: #4CAF50; /* Cor do cabeçalho da tabela */
+  color: white;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Cor de fundo alternada para as linhas */
+}
+
+.data-table tbody tr:hover {
+  background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+}

@@ -1,5 +1,7 @@
+// src/components/TablePage.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import '../styles/App.css';  // Certifique-se de que o caminho está correto
 
 const TablePage = () => {
   const [dados, setDados] = useState([]);
@@ -19,9 +21,9 @@ const TablePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="table-page">
       <h1>Filmes Consultados</h1>
-      <table>
+      <table className="data-table">
         <thead>
           <tr>
             <th>Nome</th>
